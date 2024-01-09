@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exam 5 | DevJobs</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.23/dist/full.min.css" rel="stylesheet" type="text/css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
@@ -16,20 +17,25 @@
             <a href="index.html" class="">
                 <img src="./Pictures/logo.svg" alt="" class="">
             </a>
-            <img onclick="myFunction()" src="./Pictures/mode-switcher-off.svg" alt="" class="modeSwitcher cursor-pointer">
+            <!-- <img onclick="myFunction()" src="./Pictures/mode-switcher-off.svg" alt="" class="modeSwitcher cursor-pointer"> -->
+            <div class="mode flex items-center gap-4">
+                <img src="./Pictures/light.svg" alt="" class="" height="30px" width="30px">
+                <input id="toggleBtn" onclick="myFunction()" type="checkbox" class="toggle [--tglbg:white] bg-[#5964E0] hover:bg-[#939BF4] border-white rotate-180" checked />
+                <img src="./Pictures/dark.svg" alt="" class="" height="30px" width="30px">
+            </div>
         </div>
         <section class="">
             <div class="search-container container mt-[48px]">
-                <div class="search-wrapper w-[950px] items-center flex max-sm:w-full bg-white pt-4 pb-4 pl-8 pr-4 rounded-md">
+                <div class="search-wrapper w-[950px] items-center flex max-sm:w-full bg-[var(--second-color)] pt-4 pb-4 pl-8 pr-4 rounded-md max-sm:pl-4">
                     <img src="./Pictures/search_search-icon.svg" alt="" class="mr-4 max-sm:hidden max-sm:placeholder:w-[100px] search_search-icon 400px:hidden">
-                    <input type="text" class="mr-[100px] max-sm:w-[95px] max-sm:mr-[10px] w-[270px] hover:placeholder:text-black text-[15px]" placeholder="Filter by title, companies, expertise…">
+                    <input type="text" class="bg-[var(--second-color)] mr-[100px] max-sm:w-[145px] max-sm:h-full max-sm:mr-[10px] w-[270px] hover:placeholder:text-black text-[15px]" placeholder="Filter by title, companies, expertise…">
                     <img src="./Pictures/search_location-icon.svg" alt="" class="mr-4 max-sm:hidden">
-                    <input type="text" name="" class="text-[15px] hover:placeholder:text-black max-sm:hidden" placeholder="Filter by location…">
-                    <input type="checkbox" class="mr-3 max-sm:hidden">
+                    <input type="text" name="" class="bg-[var(--second-color)] text-[15px] hover:placeholder:text-black max-sm:hidden" placeholder="Filter by location…">
+                    <input type="checkbox" class="bg-[var(--second-color)] mr-3 max-sm:hidden">
                     <p class="font-bold text-[15px] cursor-pointer max-sm:hidden">Full Time Only</p>
                     <button class="bg-[#5964E0] hover:bg-[#939BF4] transition rounded-md font-bold max-sm:hidden text-[16px] ml-auto text-white pt-4 pb-4 pr-9 pl-9">Search</button>
-                    <img src="./Pictures/key-icon-mobile.svg" alt="" class="min-sm:hidden ml-auto cursor-pointer">
-                    <img src="./Pictures/search-icon-mobile.svg" alt="" class="min-sm:hidden ml-6 cursor-pointer">
+                    <img src="./Pictures/key-icon-mobile.svg" alt="" class="min-sm:hidden md:hidden ml-auto cursor-pointer">
+                    <img src="./Pictures/search-icon-mobile.svg" alt="" class="min-sm:hidden ml-6 md:hidden cursor-pointer">
                 </div>
             </div>
         </section>
@@ -38,7 +44,7 @@
         <section class="container">
             <div class="cards-wrapper mt-[140px] flex flex-wrap">
                 <!-- Card 1 -->
-                <div class="cards_item rounded-lg bg-white pl-6 pb-8 pr-6 mr-4 w-[290px] max-sm:w-full max-sm:mr-0 max-sm:mt-[-35px]">
+                <div class="cards_item rounded-lg bg-[var(--second-color)] pl-6 pb-8 pr-6 mr-4 w-[290px] max-sm:w-full max-sm:mr-0 max-sm:mt-[-35px]">
                     <img src="./Pictures/scoot-logo.svg" alt="" class="mb-7 mt-[-20px]">
                     <div class="flex flex-col mb-[44px]">
                         <p class="text-[#6E8098] text-[15px]">5h ago <span class="ml-7 mb-3">Full Time</span></p>
@@ -48,17 +54,17 @@
                     <a href="" class="font-bold text-[13px text-[#5964E0]">United Kingdom</a>
                 </div>
                 <!-- Card 2 -->
-                <div class="cards_item rounded-lg bg-white pl-6 pb-8 pr-6 mr-4 w-[290px] max-sm:w-full max-sm:mr-0 max-sm:mt-[45px]">
+                <div class="cards_item rounded-lg bg-[var(--second-color)] pl-6 pb-8 pr-6 mr-4 w-[290px] max-sm:w-full max-sm:mr-0 max-sm:mt-[45px]">
                     <img src="./Pictures/blogr-logo.svg" alt="" class="mb-7 mt-[-20px]">
                     <div class="flex flex-col mb-[44px]">
                         <p class="text-[#6E8098] text-[15px]">20h ago <span class="ml-7 mb-3">Part Time</span></p>
                         <h3 class="text-[18px] font-bold mb-4 hover:text-[#6E8098] cursor-pointer">Haskell and PureScript Dev</h3>
-                        <p class="text-[#6E8098] text-[15px]">Blogr.</p>
+                        <p class="text-[#6E8098] text-[15px]">Blogr</p>
                     </div>
                     <a href="" class="font-bold text-[13px text-[#5964E0]">United States</a>
                 </div>
                 <!-- Card 3 -->
-                <div class="cards_item rounded-lg bg-white pl-6 pb-8 pr-6 w-[290px] max-sm:w-full max-sm:mr-0 max-sm:mt-[45px]">
+                <div class="cards_item rounded-lg bg-[var(--second-color)] pl-6 pb-8 pr-6 w-[290px] max-sm:w-full max-sm:mr-0 max-sm:mt-[45px]">
                     <img src="./Pictures/vector-logo.svg" alt="" class="mb-7 mt-[-20px]">
                     <div class="flex flex-col mb-[44px]">
                         <p class="text-[#6E8098] text-[15px]">1d ago <span class="ml-7 mb-3">Part Time</span></p>
@@ -68,7 +74,7 @@
                     <a href="" class="font-bold text-[13px text-[#5964E0]">Russia</a>
                 </div>
                 <!-- Card 4 -->
-                <div class="cards_item rounded-lg bg-white pl-6 pb-8 pr-6 w-[290px] mr-4 mt-16 max-sm:w-full max-sm:mr-0 max-sm:mt-[45px]">
+                <div class="cards_item rounded-lg bg-[var(--second-color)] pl-6 pb-8 pr-6 w-[290px] mr-4 mt-16 max-sm:w-full max-sm:mr-0 max-sm:mt-[45px]">
                     <img src="./Pictures/office-logo.svg" alt="" class="mb-7  mt-[-20px]">
                     <div class="flex flex-col mb-[44px]">
                         <p class="text-[#6E8098] text-[15px]">2d ago <span class="ml-7 mb-3">Full Time</span></p>
@@ -78,8 +84,8 @@
                     <a href="" class="font-bold text-[13px text-[#5964E0]">Japan</a>
                 </div>
                 <!-- Card 5 -->
-                <div class="cards_item rounded-lg bg-white pl-6 pb-8 pr-6 mr-4 mt-16 w-[290px] max-sm:w-full max-sm:mr-0 max-sm:mt-[45px]">
-                    <img src="./Pictures/pod-logo.png" alt="" class="mb-7 mt-[-20px]">
+                <div class="cards_item rounded-lg bg-[var(--second-color)] pl-6 pb-8 pr-6 mr-4 mt-16 w-[290px] max-sm:w-full max-sm:mr-0 max-sm:mt-[45px]">
+                    <img src="./Pictures/pod-logo.svg" alt="" class="mb-7 mt-[-20px]">
                     <div class="flex flex-col mb-[44px]">
                         <p class="text-[#6E8098] text-[15px]">2d ago <span class="ml-7 mb-3">Part Time</span></p>
                         <h3 class="text-[18px] font-bold mb-4 hover:text-[#6E8098] cursor-pointer">Remote DevOps Engineer</h3>
@@ -88,7 +94,7 @@
                     <a href="" class="font-bold text-[13px text-[#5964E0]">Thailand</a>
                 </div>
                 <!-- Card 6 -->
-                <div class="cards_item rounded-lg bg-white pl-6 pb-8 pr-6 mt-16 w-[290px] max-sm:w-full max-sm:mr-0 max-sm:mt-[45px]">
+                <div class="cards_item rounded-lg bg-[var(--second-color)] pl-6 pb-8 pr-6 mt-16 w-[290px] max-sm:w-full max-sm:mr-0 max-sm:mt-[45px]">
                     <img src="./Pictures/creative-logo.svg" alt="" class="mb-7 mt-[-20px]">
                     <div class="flex flex-col mb-[44px]">
                         <p class="text-[#6E8098] text-[15px]">4d ago <span class="ml-7 mb-3">Part Time</span></p>
@@ -98,7 +104,7 @@
                     <a href="" class="font-bold text-[13px text-[#5964E0]">Germany</a>
                 </div>
                 <!-- Card 7 -->
-                <div class="cards_item rounded-lg bg-white pl-6 pb-8 pr-6 mr-4 mt-16 w-[290px] max-sm:w-full max-sm:mr-0 max-sm:mt-[45px]">
+                <div class="cards_item rounded-lg bg-[var(--second-color)] pl-6 pb-8 pr-6 mr-4 mt-16 w-[290px] max-sm:w-full max-sm:mr-0 max-sm:mt-[45px]">
                     <img src="./Pictures/pomodoro-logo.svg" alt="" class="mb-7 mt-[-20px]">
                     <div class="flex flex-col mb-[44px]">
                         <p class="text-[#6E8098] text-[15px]">1w ago <span class="ml-7 mb-3">Full Time</span></p>
@@ -108,7 +114,7 @@
                     <a href="" class="font-bold text-[13px text-[#5964E0]">United States</a>
                 </div>
                 <!-- Card 8 -->
-                <div class="cards_item rounded-lg bg-white pl-6 pb-8 pr-6 mr-4 mt-16 w-[290px] max-sm:w-full max-sm:mr-0 max-sm:mt-[45px]">
+                <div class="cards_item rounded-lg bg-[var(--second-color)] pl-6 pb-8 pr-6 mr-4 mt-16 w-[290px] max-sm:w-full max-sm:mr-0 max-sm:mt-[45px]">
                     <img src="./Pictures/maker-logo.svg" alt="" class="mb-7 mt-[-20px]">
                     <div class="flex flex-col mb-[44px]">
                         <p class="text-[#6E8098] text-[15px]">1w ago <span class="ml-7 mb-3">Full Time</span></p>
@@ -118,7 +124,7 @@
                     <a href="" class="font-bold text-[13px text-[#5964E0]">United Kingdom</a>
                 </div>
                 <!-- Card 9 -->
-                <div class="cards_item rounded-lg bg-white pl-6 pb-8 pr-6 mt-16 w-[290px] max-sm:w-full max-sm:mr-0 max-sm:mt-[45px]">
+                <div class="cards_item rounded-lg bg-[var(--second-color)] pl-6 pb-8 pr-6 mt-16 w-[290px] max-sm:w-full max-sm:mr-0 max-sm:mt-[45px]">
                     <img src="./Pictures/coffeeroasters-logo.svg" alt="" class="mb-7 mt-[-20px] ">
                     <div class="flex flex-col mb-[44px]">
                         <p class="text-[#6E8098] text-[15px]">1w ago <span class="ml-7 mb-3">Part Time</span></p>
@@ -128,7 +134,7 @@
                     <a href="" class="font-bold text-[13px text-[#5964E0]">Singapore</a>
                 </div>
                 <!-- Card 10 --> 
-                <div class="cards_item rounded-lg bg-white pl-6 pb-8 pr-6 mr-4 mt-16 w-[290px] max-sm:w-full max-sm:mr-0 max-sm:mt-[45px]">
+                <div class="cards_item rounded-lg bg-[var(--second-color)] pl-6 pb-8 pr-6 mr-4 mt-16 w-[290px] max-sm:w-full max-sm:mr-0 max-sm:mt-[45px]">
                     <img src="./Pictures/mastercraft-logo.svg" alt="" class="mb-7 mt-[-20px]">
                     <div class="flex flex-col mb-[44px]">
                         <p class="text-[#6E8098] text-[15px]">2w ago <span class="ml-7 mb-3">Freelance</span></p>
@@ -138,7 +144,7 @@
                     <a href="" class="font-bold text-[13px text-[#5964E0]">United States</a>
                 </div>
                 <!-- Card 11 -->
-                <div class="cards_item rounded-lg bg-white pl-6 pb-8 pr-6 mr-4 mt-16 w-[290px] max-sm:w-full max-sm:mr-0 max-sm:mt-[45px]">
+                <div class="cards_item rounded-lg bg-[var(--second-color)] pl-6 pb-8 pr-6 mr-4 mt-16 w-[290px] max-sm:w-full max-sm:mr-0 max-sm:mt-[45px]">
                     <img src="./Pictures/crowdfund-logo.svg" alt="" class="mb-7 mt-[-20px]">
                     <div class="flex flex-col mb-[44px]">
                         <p class="text-[#6E8098] text-[15px]">1mo ago <span class="ml-7 mb-3">Part Time</span></p>
@@ -148,7 +154,7 @@
                     <a href="" class="font-bold text-[13px text-[#5964E0]">New Zealand</a>
                 </div>
                 <!-- Card 12 -->
-                <div class="cards_item rounded-lg bg-white pl-6 pb-8 pr-6 mt-16 w-[290px] max-sm:w-full max-sm:mr-0 max-sm:mt-[45px]">
+                <div class="cards_item rounded-lg bg-[var(--second-color)] pl-6 pb-8 pr-6 mt-16 w-[290px] max-sm:w-full max-sm:mr-0 max-sm:mt-[45px]">
                     <img src="./Pictures/typemaster-logo.svg" alt="" class="mb-7 mt-[-20px]">
                     <div class="flex flex-col mb-[44px]">
                         <p class="text-[#6E8098] text-[15px]">4d ago <span class="ml-7 mb-3">Part Time</span></p>
