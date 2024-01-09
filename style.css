@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #F4F6F8;
+    color: black;
+    font-family: "Kumbh Sans";
+}
+
+.container{
+    max-width: 1210px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 165px;
+    padding-left: 165px;
+}
+
+.header{
+    background-image: url(./Pictures/header-bg.png);
+}
+
+.dark-mode{
+    background-color: #121721;
+    color: white;
+}
+.card-dark-mode{
+    background-color: #19202D;
+}
+
+
+@media screen and (max-width: 400px) {
+    .container{
+        max-width: 400px;
+        padding-right: 17px;
+        padding-left: 17px;
+    }
+
+    .search_search img{
+        display: none;
+    }
+
+    header{
+        background-position: center;
+    }
+}
