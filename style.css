@@ -5,8 +5,8 @@
 }
 
 body{
-    background-color: #F4F6F8;
-    color: black;
+    background-color: var(--main-color);
+    color: var(--text-color);
     font-family: "Kumbh Sans";
 }
 
@@ -30,6 +30,20 @@ body{
 .card-dark-mode{
     background-color: #19202D;
 }
+
+
+/* Styles */
+
+    :root{
+        --main-color: #F4F6F8;
+        --second-color: #ffffff;
+        --text-color: black;
+    }
+    .dark-theme{
+        --main-color: #121721;
+        --second-color: #19202D;
+        --text-color: white;
+    }
 
 
 @media screen and (max-width: 400px) {
